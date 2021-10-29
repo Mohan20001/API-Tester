@@ -7,7 +7,6 @@ let sendBtn=document.getElementById('send-btn');
 addBtn.addEventListener('click', ()=>{
      let key=document.getElementById('key').value;
      let val=document.getElementById('val').value;
-     console.log(key +" "+val);
      keyVal(key, val, items);
 });
 

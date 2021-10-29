@@ -191,6 +191,8 @@ input[type='text']{
     color: rgb(248, 107, 56);
     min-height: 400px;
     overflow: scroll;
+    line-height: 30px;
+    
 }
 .output::-webkit-scrollbar{
     display: none;
