@@ -198,15 +198,14 @@ input[type='text']{
 
 
 .inpt-section{
-    position: absolute;
+    position: relative;
     bottom: 0;
     left: 0;
     display: grid;
     width: 100%;
     grid-template-columns:repeat(3, 30%);
-    grid-gap: 1em;
 }
-.key, .value, #send-btn{
+.key, .value, #add-btn{
     padding: 3px;
 }
 

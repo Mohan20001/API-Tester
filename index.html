@@ -19,11 +19,11 @@
     </main>
     <div class="work-place" id="work">
         <div class='url-section'>
-             <select>
+             <select id="sel">
                  <option value="GET" selected>GET</option>
                  <option value="POST">POST</option>
              </select>
-             <input class="txt" type="text">
+             <input id="urlp" class="txt" type="text">
              <button id="send-btn">send</button>
         </div>
 
@@ -37,13 +37,13 @@
          <div class="property-items">
 
              <div class="item">
-                 <div>1</div>
+                 <div>NO</div>
                  <div>key</div>
                  <div>value</div>
              </div>
          <div class="inpt-section">
-             <input class="key" type="text" placeholder="Key" required>
-             <input class="value" type="text" placeholder="Value" required>
+             <input id="key" class="key" type="text" placeholder="Key" required>
+             <input id="val" class="value" type="text" placeholder="Value" required>
              <button id="add-btn">Add</button>
          </div>
          </div>
