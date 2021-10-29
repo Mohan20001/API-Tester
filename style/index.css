@@ -48,7 +48,7 @@ main{
     display: grid;
     place-items: center;
 }
-main::before{
+main::after{
     content: '';
     position: absolute;
     bottom: 0px;
