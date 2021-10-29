@@ -4,6 +4,7 @@ let items=document.querySelector('.property-items');
 let output=document.querySelector('.output');
 let sendBtn=document.getElementById('send-btn');
 
+
 addBtn.addEventListener('click', ()=>{
      let key=document.getElementById('key').value;
      let val=document.getElementById('val').value;
@@ -11,6 +12,9 @@ addBtn.addEventListener('click', ()=>{
 });
 
 function keyVal(key, val, parent) {
+    //new
+let urlPath=document.getElementById('urlp').value;
+     if(key!=""&&val!=""){
       noOfItems++;
     let div=document.createElement('div');
     let a=document.createElement('div');
@@ -30,6 +34,11 @@ div.appendChild(a);
 div.appendChild(c);
 div.appendChild(d);
 parent.appendChild(div);
+urlAdd(urlPath);
+
+     }
+     document.getElementById('key').value="";
+     document.getElementById('val').value="";
 }
 
 let p="https://api.dictionaryapi.dev/api/v2/entries/en/hello"
@@ -51,6 +60,20 @@ async function getData(url, perant) {
 
 
 sendBtn.addEventListener('click',()=>{
-       let urlPath=document.getElementById('urlp').value;
+    let urlPath=document.getElementById('urlp').value;
        getData(urlPath, output);
+      
 });
+
+function urlAdd(urlpth) {
+    // let pathurl=document.getElementById('urlp').value;
+    let keyword=document.getElementById('key').value;
+    let valword=document.getElementById('val').value;
+    let finel=document.getElementById('urlp');
+
+    if(keyword!==""&&valword!=""){
+    urlpth +=`&${keyword}=${valword}`;
+    finel.value=urlpth;
+    }
+}
+
